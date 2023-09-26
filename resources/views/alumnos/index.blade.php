@@ -34,14 +34,17 @@
                     <td>{{ $alumno->email }}</td>
                     <td>{{ $alumno->nivel->nombre }}</td>
                     <td><a href="{{ url('alumnos/'.$alumno->id.'/edit') }}" class="btn btn-warning btn-sm">Editar</a></td>
-                    <td><form action=" {{ url('alumnos/'.$alumno->id) }} " method="post">
-                        @method("DELETE")
-                        @csrf
-                        <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
-                    </form></td>
+                    <td>
+                        <form action=" {{ url('alumnos/'.$alumno->id) }} " method="post">
+                            @method("DELETE")
+                            @csrf
+                            <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
+                        </form>
+                    </td>
                 </tr>
                 @endforeach
             </tbody>
         </table>
     </div>
 </main>
+@endsection

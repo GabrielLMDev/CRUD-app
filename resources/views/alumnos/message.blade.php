@@ -10,3 +10,4 @@
         <a href="{{ url('alumnos') }}" class="btn btn-secondary">Regresar</a>
     </div>
 </main>
+@endsection
